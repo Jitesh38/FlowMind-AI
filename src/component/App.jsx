@@ -50,7 +50,7 @@ function App() {
 
   return (
     <>
-      <div className="flex-center flex-1 overflow-auto">
+      <div className="flex flex-1 items-center justify-center overflow-auto h-full w-full">
         {showPopup ? askQuestion() : null}
         {showSignupPopup && (
           <Popup

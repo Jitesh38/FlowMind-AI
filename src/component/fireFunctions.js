@@ -1,4 +1,4 @@
-import { collection, addDoc, setDoc, doc, updateDoc, getDoc } from "firebase/firestore";
+import { collection, addDoc, setDoc, doc, updateDoc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
 const setData = async (collection, userID, data) => {
@@ -28,4 +28,15 @@ const readData = async (collection, uID) => {
     }
 }
 
-export { setData, updateData, readData }
+// Function to get total number of users
+const getTotalUsers = async () => {
+    try {
+        const usersSnapshot = await getDocs(collection(db, "users"));
+        return usersSnapshot.size;
+    } catch (e) {
+        console.error("Error getting total users:", e);
+        return 0;
+    }
+}
+
+export { setData, updateData, readData, getTotalUsers }

@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import { Navbar } from "./component";
+import { Navbar, Footer } from "./component";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useUser } from "./context/UserContextProvider";
@@ -32,7 +32,10 @@ function Layout() {
   return (
     <div className="flex flex-col h-screen">
       <Navbar />
-      <Outlet />
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
   );
 }

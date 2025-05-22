@@ -43,7 +43,7 @@ const Tasks = () => {
 
   if (!parsedTodos || Object.keys(parsedTodos).length === 0) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-200">
+      <div className="w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-200">
         <div className="max-w-2xl mx-auto p-10 bg-white rounded-2xl shadow-2xl flex flex-col items-center">
           <h2 className="text-2xl font-semibold text-gray-700 mb-2">
             No AI-generated tasks yet
@@ -58,7 +58,7 @@ const Tasks = () => {
 
   if (parsedTodos.error) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
+      <div className="w-full flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
         <div className="max-w-2xl mx-auto p-10 bg-white rounded-2xl shadow-2xl flex flex-col items-center">
           <h2 className="text-2xl font-semibold text-red-700 mb-2">Error</h2>
           <p className="text-red-500">{parsedTodos.error}</p>
@@ -68,7 +68,7 @@ const Tasks = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 py-10  px-4">
+    <div className="bg-white text-gray-900 py-10  px-4">
       <div className="max-w-5xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold text-slate-900 mb-2">
           Your AI-Generated Tasks
