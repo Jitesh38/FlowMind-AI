@@ -44,7 +44,7 @@ function App() {
       setCurrentQuestion((prev) => prev + 1);
     } else {
       setCurrentQuestion((prev) => prev + 1);
-      console.log("Final routine data:", routineData);
+      // console.log("Final routine data:", routineData);
     }
   };
 

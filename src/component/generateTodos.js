@@ -1,4 +1,3 @@
-import React from "react"
 import { useUser } from "../context/UserContextProvider";
 
 const generateTaskPrompt = (data) => {
@@ -34,10 +33,6 @@ const generateTodos = async (routineData) => {
     const apiUrl = import.meta.env.VITE_API_URL;
     const apiKey = import.meta.env.VITE_API_KEY;
     const AI_Model = import.meta.env.VITE_AI_MODEL;
-
-
-    console.log(apiUrl,apiKey,AI_Model)
-
 
     fetch(apiUrl, {
         method: "POST",

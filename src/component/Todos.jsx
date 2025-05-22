@@ -35,7 +35,6 @@ const parseTodos = (todos) => {
 const Tasks = () => {
   const { todos, loading } = useUser();
 
-  console.log("In Tasks : ", typeof todos, todos);
   const parsedTodos = useMemo(() => parseTodos(todos), [todos]);
 
   if (loading) {

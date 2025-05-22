@@ -11,7 +11,7 @@ function Layout() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log('In Layout Jsx:',currentUser);
+      // console.log('In Layout Jsx:',currentUser);
       setLoading(false); // Done loading
     });
     // Cleanup on unmount
@@ -26,7 +26,7 @@ function Layout() {
       Loading...
     </div>
   </div>
-    ); // or a spinner
+    ); 
   }
 
   return (

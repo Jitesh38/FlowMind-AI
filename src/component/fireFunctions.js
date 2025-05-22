@@ -20,7 +20,7 @@ const updateData = async (collection, userID, data) => {
 const readData = async (collection, uID) => {
     const docSnap = await getDoc(doc(db, collection, uID));
     if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
+        // console.log("Document data:", docSnap.data());
         return docSnap.data()
     } else {
         console.log("No such document!");

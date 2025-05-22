@@ -10,11 +10,13 @@ const UserContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (user) {
-      setLoading(true)
+      setLoading(true);
       readData("users", user.uid).then((data) => {
         if (data !== null) {
           setTodos(data);
-          setLoading(false)
+          setLoading(false);
+        } else {
+          setTodos(null);
         }
       });
     }

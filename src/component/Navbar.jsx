@@ -6,13 +6,20 @@ import { NavLink } from "react-router";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { user, setUser } = useUser();
-  
+  const { user, setUser, todos } = useUser();
+
   return (
     <nav className="flex justify-between items-center px-8 py-4 bg-gray-900 text-white">
-      <NavLink to={"/"}>
-        <div className="text-2xl font-bold cursor-pointer">FlowMind AI</div>
-      </NavLink>
+      <div className="flex-center flex-row gap-4">
+        <NavLink to={"/"}>
+          <div className="text-2xl font-bold cursor-pointer">FlowMind AI</div>
+        </NavLink>
+        {todos && (
+          <NavLink to={"tasks"}>
+            <div className="text-xl font-semibold cursor-pointer text-gray-300">Tasks</div>
+          </NavLink>
+        )}
+      </div>
       <div className="flex gap-4">
         {!user ? (
           <>
